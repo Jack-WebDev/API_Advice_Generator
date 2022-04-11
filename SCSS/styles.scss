@@ -1,0 +1,126 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+$LightCyan: hsl(193, 38%, 86%);
+$NeonGreen: hsl(150, 100%, 66%);
+$GrayishBlue: hsl(217, 19%, 38%);
+$DarkGrayishBlue: hsl(217, 19%, 24%);
+$DarkBlue: hsl(218, 23%, 16%);
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    background-color: $DarkBlue;
+    color: $LightCyan;
+
+}
+
+.main__container {
+    display: grid;
+    padding: 4rem 2rem;
+    width: 90%;
+    background-color: $DarkGrayishBlue;
+    border-radius: 10px;
+    position: relative;
+
+    h1 {
+        color: $NeonGreen;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    blockquote {
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 28px;
+    }
+
+    .pattern__divider--mobile {
+        width: 100%;
+    }
+
+    .pattern__divider--desktop {
+        display: none;
+    }
+
+    .dice__container {
+        position: absolute;
+        bottom: -42px;
+        left: 40%;
+        width: 20%;
+        background-color: $NeonGreen;
+        padding: 1.3rem;
+        border-radius: 50%;
+
+        .dice {
+            width: 100%;
+            transition: 800ms ease;
+        }
+
+    }
+    .dice__container:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px 40px $NeonGreen;
+    }
+}
+
+.main__container .dice__container.active {
+
+    .dice {
+        transform: rotate(360deg);
+        transition: transform 800ms ease;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    .main__container {
+        display: grid;
+        padding: 4rem 2rem;
+        max-width: 50%;
+        height: 70vh;
+        background-color: $DarkGrayishBlue;
+        border-radius: 10px;
+        position: relative;
+    
+        .pattern__divider--mobile {
+            width: 100%;
+            display: none;
+        }
+    
+        .pattern__divider--desktop {
+            display: block;
+            width: 100%;
+        }
+    
+        .dice__container {
+            position: absolute;
+            bottom: -42px;
+            left: 43%;
+            width: 15%;
+            background-color: $NeonGreen;
+            padding: 1.3rem;
+            border-radius: 50%;
+    
+            .dice {
+                width: 100%;
+                transition: 800ms ease;
+            }
+    
+        }
+        .dice__container:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 40px $NeonGreen;
+        }
+    }
+}
+

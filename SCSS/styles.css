@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+  background-color: #1f2632;
+  color: #cee3e9;
+}
+
+.main__container {
+  display: grid;
+  padding: 4rem 2rem;
+  width: 90%;
+  background-color: #323a49;
+  border-radius: 10px;
+  position: relative;
+}
+.main__container h1 {
+  color: #52ffa8;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.main__container blockquote {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 28px;
+}
+.main__container .pattern__divider--mobile {
+  width: 100%;
+}
+.main__container .pattern__divider--desktop {
+  display: none;
+}
+.main__container .dice__container {
+  position: absolute;
+  bottom: -42px;
+  left: 40%;
+  width: 20%;
+  background-color: #52ffa8;
+  padding: 1.3rem;
+  border-radius: 50%;
+}
+.main__container .dice__container .dice {
+  width: 100%;
+  transition: 800ms ease;
+}
+.main__container .dice__container:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 40px #52ffa8;
+}
+
+.main__container .dice__container.active .dice {
+  transform: rotate(360deg);
+  transition: transform 800ms ease;
+}
+
+@media screen and (min-width: 700px) {
+  .main__container {
+    display: grid;
+    padding: 4rem 2rem;
+    max-width: 50%;
+    height: 70vh;
+    background-color: #323a49;
+    border-radius: 10px;
+    position: relative;
+  }
+  .main__container .pattern__divider--mobile {
+    width: 100%;
+    display: none;
+  }
+  .main__container .pattern__divider--desktop {
+    display: block;
+    width: 100%;
+  }
+  .main__container .dice__container {
+    position: absolute;
+    bottom: -42px;
+    left: 43%;
+    width: 15%;
+    background-color: #52ffa8;
+    padding: 1.3rem;
+    border-radius: 50%;
+  }
+  .main__container .dice__container .dice {
+    width: 100%;
+    transition: 800ms ease;
+  }
+  .main__container .dice__container:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 40px #52ffa8;
+  }
+}/*# sourceMappingURL=styles.css.map */
