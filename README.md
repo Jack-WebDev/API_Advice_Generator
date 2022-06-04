@@ -30,7 +30,7 @@ My users should be able to:
 
 - Solution URL: [https://github.com/Jack-WebDev/API-Advice-Generator.git]
 
-- Live Site URL: [https://jack-webdev.github.io/API-Advice-Generator/]
+- Live Site URL: [https://jack-webdev.github.io/API_Advice_Generator/]
 
 ## My Process
 
